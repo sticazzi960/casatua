@@ -168,12 +168,6 @@ var cur=0, ans=[], apiKey='';
 var LETTERS=['A','B','C','D'];
 
 document.getElementById('btnStart').onclick=function(){
-  var raw=document.getElementById('apiKey').value;
-  var key='';
-  for(var i=0;i<raw.length;i++){var c=raw.charCodeAt(i);if(c>=33&&c<=126)key+=raw[i];}
-  if(!key||key.length<20){alert('Inserisci la tua API key!');return;}
-  if(key.indexOf('sk-ant')===-1){alert('La API key deve iniziare con sk-ant-');return;}
-  apiKey=key;
   ans=new Array(QS.length).fill(null);
   show('pg-quiz');
   renderQ(0);
